@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Dosis", sans-serif;
+}
+
+.gridwrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+.hamburgare{
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    background-color: red;
+    cursor: pointer;
+}
