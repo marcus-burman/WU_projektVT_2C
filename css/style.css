@@ -1,10 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     font-family: "Dosis", sans-serif;
+    width: 100vw;
 }
 
 .gridwrapper{
@@ -110,4 +112,17 @@ body{
 
 .header{
     grid-area: he;
+}
+
+img{
+    max-width: 50vw;
+    height: auto;
+}
+
+p{
+    font-size: 3vw
+}
+
+h2{
+    font-size: 4vw
 }
