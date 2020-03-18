@@ -7,15 +7,18 @@
 body{
     font-family: "Dosis", sans-serif;
     width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(lightblue,gray);
+    
 }
 
 .gridwrapper{
     width: 100vw;
     height: 250vh;
-    background-color: white;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     grid-template-areas: 
     "he he"
     "s1 a1"
@@ -50,6 +53,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.8s;
+    z-index: 1;
 }
 
 .change{
@@ -112,17 +116,88 @@ body{
 
 .header{
     grid-area: he;
-}
-
-img{
-    max-width: 50vw;
-    height: auto;
+    display: flex;
+    position: relative;
 }
 
 p{
-    font-size: 3vw
+    font-size: 2vw;
+    
 }
 
 h2{
-    font-size: 4vw
+    font-size: 4vw;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.s1{
+    grid-area: s1;
+}
+
+.a1{
+    grid-area: a1;
+}
+
+.a2{
+    grid-area: a2;
+}
+
+.s2{
+    grid-area: s2;
+}
+
+.s3{
+    grid-area: s3;
+}
+
+.a3{
+    grid-area: a3;
+}
+
+.a4{
+    grid-area: a4;
+}
+
+.s4{
+    grid-area: s4;
+}
+
+.s5{
+    grid-area: s5;
+}
+
+.a5{
+    grid-area: a5;
+}
+
+.a6{
+    grid-area: a6;
+}
+
+.s6{
+    grid-area: s6;
+}
+
+article h2{
+    position: absolute;
+    top: 2%;
+}
+
+header h1{
+    position: absolute;
+    top: 35%;
+    left: 6%;
+}
+
