@@ -8,17 +8,17 @@ body{
     font-family: "Dosis", sans-serif;
     width: 100vw;
     overflow-x: hidden;
-    background: linear-gradient(lightblue,gray);
+    background: linear-gradient(lightblue,gray,lightblue);
+    height: auto;
     
 }
 
 .gridwrapper{
     width: 100vw;
-    height: 250vh;
-    
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
     grid-template-areas: 
     "he he"
     "s1 a1"
@@ -45,7 +45,7 @@ body{
 .nav{
     width: 100%;
     height: 100%;
-    background-color: #262626;
+    background-color: darkgray;
     position: fixed;
     top: 0;
     right: -100vw;
@@ -59,6 +59,7 @@ body{
 .change{
     right: 0;
 }
+
 .linje{
     width: 100%;
     height: 3px;
@@ -197,7 +198,209 @@ article h2{
 
 header h1{
     position: absolute;
-    top: 35%;
-    left: 6%;
+    top: 47px;
+    left: 90px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+h3{
+    font-size: 0.65em;
+    text-align: left;
+    position: absolute;
+    top: 15%
+}
+
+.footer{
+    grid-area: fo;
+    background-color: darkgray;
+    display: block;
+    overflow: hidden;
+    padding: 10vh 0;
+    box-sizing: border-box;
+}
+
+.inner_footer{
+    display: block;
+    margin: 0 3vh;
+    width: 35vh;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+.inner_footer .logo_container{
+    width: 20%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+.inner_footer .logo_container img{
+    width: 15vw;
+    height: auto;
+    
+}
+
+.inner_footer .footer_list{
+    width: 25%;
+    margin-left: 0vw;
+    margin-right: 18.6vw;
+    float: left;
+    height: 100%;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+.inner_footer .footer_list:last-child{
+    margin-right: 0;
+}
+
+.footer_list{
+    text-decoration: none;
+    color: #eee;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.inner_footer a{
+    font-size: 0.85em;
+    text-decoration: none;
+    color: #262626;
+}
+
+article h6{
+    position: absolute;
+    top: 10%;
+}
+
+article p{
+    padding: 5vw;
+}
+
+.a1 h1{
+    font-size: 1.5em;
+    position: absolute;
+    top: 2%;
+}
+
+.rea{
+    font-size: 3em
+}
+
+.möbel{
+    font-size: 1.2em
+}
+
+.header img{
+    width: auto;
+    height: auto;
+}
+
+@media only screen and (min-width: 1200px){
+    .gridwrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr 1fr auto;
+        grid-template-areas: 
+        "he he he he"
+        "s1 a1 s2 a2"
+        "a3 s3 a4 s4"
+        "s5 a5 s6 a6"
+        "fo fo fo fo";
+    }
+    
+    article p{
+        font-size: 1em
+    }
+
+    article h2{
+        font-size: 3em;
+    }
+
+    article h6{
+        top: 15%
+    }
+
+    .möbel{
+        font-size: 1.5em;
+        top: 120px
+    }
+
+    .a1 h1{
+        font-size: 3em;
+    }
+    
+    .header h1{
+        top: 55px;
+    }
+
+    .inner_footer{
+        display: block;
+        margin: 0 3vh;
+        width: 100%;
+        height: 100%;        
+    }
+    
+    .inner_footer .logo_container{
+        width: 10%;
+        margin-right: 23.8%;
+        margin-left: 15%;
+    }
+    
+    .inner_footer .logo_container img{
+        height: auto;    
+    }
+    
+    .inner_footer .footer_list{
+        width: 8%;
+        margin-left: 0vw;
+        margin-right: 5vw;
+    }
+    
+    .inner_footer .footer_list:last-child{
+        margin-right: 0;
+    }
+    
+    .footer_list{
+        text-decoration: none;
+        color: #eee;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .inner_footer a{
+        font-size: 0.85em;
+    }
+
+    .nav{
+        height: 100%;
+        width: 25%;
+        border-radius: 40% 0 0 40%;
+    }
+
+    .nav-link::before,
+    .nav-link::after{
+        transform: scaleX(0);
+        transition: transform 0.5s;
+    }
+
+    .nav-link::after{
+        transform-origin: right;
+    }
+
+    .nav-link::before{
+        transform-origin: left;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:hover::after{
+        transform: scaleX(1)
+    }
+
+    h3{
+        top: 25%;
+        font-size: 1em;
+    }
+}
